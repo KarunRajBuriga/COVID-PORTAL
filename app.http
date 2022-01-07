@@ -1,0 +1,64 @@
+//USER LOGIN
+###
+POST http://localhost:3000/login/
+Content-Type:application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+// GET STATES
+###
+GET  http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQxNTM1MzA4fQ.uBBPWBNrupUKReGcMzZ_mp4hPtxFKv4Rwa6ZxevGdHg
+
+//GET STATE DETAILS
+###
+GET  http://localhost:3000/states/8/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQxNTM1MzA4fQ.uBBPWBNrupUKReGcMzZ_mp4hPtxFKv4Rwa6ZxevGdHg
+
+// POST DISTRICT DETAILS
+###
+POST  http://localhost:3000/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQxNTM1MzA4fQ.uBBPWBNrupUKReGcMzZ_mp4hPtxFKv4Rwa6ZxevGdHg
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+//GET DISTRICT DETAILS
+###
+GET  http://localhost:3000/districts/322/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQxNTM1MzA4fQ.uBBPWBNrupUKReGcMzZ_mp4hPtxFKv4Rwa6ZxevGdHg
+
+//DELETE DISTRICT DETAILS
+###
+DELETE http://localhost:3000/districts/323/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQxNTM1MzA4fQ.uBBPWBNrupUKReGcMzZ_mp4hPtxFKv4Rwa6ZxevGdHg
+
+//PUT DISTRICT DETAILS
+###
+PUT http://localhost:3000/districts/323/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQxNTM1MzA4fQ.uBBPWBNrupUKReGcMzZ_mp4hPtxFKv4Rwa6ZxevGdHg
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+//GET STATE STATS DETAILS
+###
+GET http://localhost:3000/states/3/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjQxNTM1MzA4fQ.uBBPWBNrupUKReGcMzZ_mp4hPtxFKv4Rwa6ZxevGdHg
